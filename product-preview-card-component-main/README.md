@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-https://github.com/virgile-lab/Frontend-Mentor-Product-preview-card-component/blob/main/Screenshot.png
+![](./Screenshot.png)
 
 ### Links
 
-- Solution URL: https://github.com/virgile-lab/Frontend-Mentor-Product-preview-card-component
-- Live Site URL: https://virgile-lab.github.io/
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/product-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/product-preview-card-component-main)
+- Live Site URL: [https://virgile-lab.github.io/product-preview-card-component-main/](https://virgile-lab.github.io/product-preview-card-component-main/)
 
 ## My process
 
