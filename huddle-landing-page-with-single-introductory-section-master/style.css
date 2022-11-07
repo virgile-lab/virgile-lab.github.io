@@ -1,0 +1,272 @@
+:root {
+    /*Layouts*/
+    --mobileWidth: ;
+    --desktopWidth: ;
+    /* Colors */
+    --primaryClr: hsl(257, 40%, 49%);
+    --primaryShadow: hsl(257, 40%, 30%);
+    --secondaryClr: hsl(300, 69%, 71%);
+    --neutralWhite: rgb(255, 255, 255);
+    /* Font Size */
+    /* Font Weight */
+    --fw-400: 400;
+    --fw-600: 600;
+    /* Typography */
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+}
+
+
+/*** A Modern CSS Reset by https://piccalil.li/blog/a-modern-css-reset/ ***/
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* emove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* emove list styles on ul, ol elements with a list role, which suggests default styling will be emoved */
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+    font-size: 16px;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primaryClr);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    max-width: 1440px;
+    min-height: 100vh;
+    padding: 3.5em 5em 2.5em 4.5em;
+}
+
+.graphic-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 55%;
+    height: 100%;
+}
+
+.logo {
+    width: fit-content;
+}
+
+.logo img {
+    width: 80%;
+}
+
+.illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5em;
+    height: 100%;
+}
+
+.illustration img {
+    max-height: 100%;
+}
+
+.cta-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--neutralWhite);
+    padding: .2em .5em 3em 3.4em;
+}
+
+.cta-container h1 {
+    font-family: var(--ff-heading);
+    font-size: 2.46em;
+    line-height: 1.5;
+}
+
+.cta-container p {
+    font-family: var(--ff-body);
+    font-size: 1.12em;
+    line-height: 1.5;
+    margin-block: 1.2em;
+}
+
+.cta-container button {
+    width: 10.3em;
+    padding: 1em;
+    border: none;
+    border-radius: 2em;
+    font-family: var(--ff-body);
+    font-size: 1.2em;
+    background-color: var(--neutralWhite);
+    color: var(--primaryClr);
+    box-shadow: 0 5px 10px var(--primaryShadow);
+    cursor: pointer;
+}
+
+.cta-container :is(button:hover, button:focus-within) {
+    background-color: var(--secondaryClr);
+    color: var(--neutralWhite);
+}
+
+.social-media-container {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    gap: 1em;
+}
+
+.social-media-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-decoration: none;
+    height: 2.1em;
+    width: 2.1em;
+    border: 1px solid var(--neutralWhite);
+    border-radius: 50%;
+    color: var(--neutralWhite);
+    font-size: 1.2em;
+}
+
+.social-media-container :is(a:hover, a:focus-within) {
+    border-color: var(--secondaryClr);
+    color: var(--secondaryClr);
+}
+
+@media only screen and (max-width:650px) {
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-size: 100%;
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(40%, 50%) 1fr;
+        padding: 2em 2.25em;
+        max-width: 500px;
+    }
+    .logo img {
+        width: 48%;
+    }
+    .illustration {
+        padding: 0;
+    }
+    .cta-container {
+        text-align: center;
+        align-items: center;
+        padding: 0;
+    }
+    .cta-container h1 {
+        font-size: 1.48em;
+    }
+    .cta-container p {
+        font-size: 1em;
+        margin-block: .9em 1.5em;
+    }
+    .cta-container button {
+        width: 15.5em;
+        font-size: .8em;
+    }
+    .social-media-container {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding: .5em 0;
+        gap: .6em;
+        height: 100%;
+    }
+    .social-media-container a {
+        height: 28px;
+        width: 28px;
+        font-size: .9em;
+    }
+}
