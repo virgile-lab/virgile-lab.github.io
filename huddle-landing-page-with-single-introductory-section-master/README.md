@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/Frontend-Mentor-huddle-landing-page-with-single-introductory-section-master](https://github.com/virgile-lab/Frontend-Mentor-huddle-landing-page-with-single-introductory-section-master)
-- Live Site URL: [Add live site URL here](https://virgile-lab.github.io/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/huddle-landing-page-with-single-introductory-section-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/huddle-landing-page-with-single-introductory-section-master)
+- Live Site URL: [https://virgile-lab.github.io/huddle-landing-page-with-single-introductory-section-master/](https://virgile-lab.github.io/huddle-landing-page-with-single-introductory-section-master/)
 
 ### Built with
 
