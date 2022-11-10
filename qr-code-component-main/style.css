@@ -8,6 +8,7 @@
     --neutral-200: hsl(212, 45%, 89%);
     --neutral-300: hsl(220, 15%, 55%);
     --neutral-400: hsl(218, 44%, 22%);
+    --shadow: hsl(212, 45%, 82%);
     /* Font Size */
     --fs-paragraph: 15px;
     /* Font Weight */
@@ -126,17 +127,18 @@ main {
     max-width: 20em;
     background-color: var(--neutral-100);
     padding: 1em;
-    border-radius: 1em;
+    border-radius: 1.2em;
+    box-shadow: 0 2em 2em var(--shadow);
 }
 
 .qr-code {
-    border-radius: .5em;
-    margin-bottom: 1.6em;
+    border-radius: .6em;
+    margin-bottom: 1.5em;
 }
 
 .text-container {
     font-family: var(--ff-primary);
-    padding: 0 1em 1.3em 1em;
+    padding: 0 1em 1.4em 1em;
 }
 
 .text-container h1 {
