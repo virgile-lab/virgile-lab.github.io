@@ -21,7 +21,10 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### The challenge
 
-- Build out the project to the designs provided
+Users should be able to:
+
+- View the optimal layout depending on their device's screen size
+- See hover states for interactive elements
 
 ### Screenshot
 
@@ -30,8 +33,8 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/profile-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/profile-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/profile-card-component-main/](https://virgile-lab.github.io/profile-card-component-main/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/3-column-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/3-column-preview-card-component-main)
+- Live Site URL: [https://virgile-lab.github.io/3-column-preview-card-component-main/](https://virgile-lab.github.io/3-column-preview-card-component-main/)
 
 ### Built with
 
