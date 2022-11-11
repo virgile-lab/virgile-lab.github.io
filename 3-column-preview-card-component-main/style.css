@@ -122,9 +122,6 @@ main {
     place-items: center;
     min-height: 100vh;
     background-color: var(--neutral-100);
-    background-image: url(design/desktop-design.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .container {
@@ -134,7 +131,6 @@ main {
     overflow: hidden;
     max-width: 57.4em;
     margin: 2.6em 1.5em 0;
-    opacity: .5;
 }
 
 .container h1 {
