@@ -122,6 +122,9 @@ main {
     place-items: center;
     min-height: 100vh;
     background-color: var(--neutral-100);
+    background-image: url(design/desktop-design.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .container {
@@ -131,6 +134,7 @@ main {
     overflow: hidden;
     max-width: 57.4em;
     margin: 2.6em 1.5em 0;
+    opacity: .5;
 }
 
 .container h1 {
@@ -138,7 +142,7 @@ main {
     font-size: 2.5em;
     color: var(--neutral-100);
     text-transform: uppercase;
-    padding: 1.1em 0 .7em 0;
+    padding: 1em 0 .7em 0;
 }
 
 .container p {
@@ -146,7 +150,7 @@ main {
     font-size: var(--fs-primary);
     color: var(--neutral-200);
     line-height: 1.7;
-    margin-bottom: 5em;
+    margin-bottom: 5.5em;
 }
 
 .container button {
@@ -155,7 +159,7 @@ main {
     font-family: var(--ff-LD);
     font-size: var(--fs-primary);
     background-color: var(--neutral-100);
-    padding: 1em 1.9em;
+    padding: .89em 1.9em;
     cursor: pointer;
 }
 
