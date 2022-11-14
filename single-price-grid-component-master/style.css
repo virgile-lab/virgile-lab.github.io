@@ -137,13 +137,10 @@ main {
 
 .component {
     max-width: 63.6rem;
-    min-height: 47.6rem;
     border-radius: 1rem;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-flow: row;
-    grid-auto-rows: 45.6% 1fr;
     box-shadow: 0 2rem 2rem 0rem var(--clr-shadow);
     margin: 3.2rem;
     letter-spacing: -.016rem;
@@ -152,6 +149,7 @@ main {
 .header {
     grid-column: 1 / span 2;
     background-color: var(--clr-neutral-100);
+    padding-block: 0 4rem;
 }
 
 .header h1 {
@@ -177,6 +175,7 @@ main {
 .subscription,
 .why-us {
     color: var(--clr-neutral-100);
+    padding-block: 0 2.6rem;
 }
 
 .subscription h2,
@@ -261,6 +260,7 @@ button:focus-within) {
     }
     .header {
         grid-column: 1 / 1;
+        padding: 0;
     }
     .header h1 {
         font-size: 1.987em;
@@ -276,6 +276,10 @@ button:focus-within) {
         font-size: 1.4em;
         line-height: 1.8;
         margin-block: 0 3.2rem;
+    }
+    .subscription,
+    .why-us {
+        padding: 0;
     }
     .subscription h2 {
         margin-block: 0 1.9rem;
