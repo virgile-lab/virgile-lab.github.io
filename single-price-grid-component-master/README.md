@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/single-price-grid-component-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/single-price-grid-component-master)
-- Live Site URL: [https://virgile-lab.github.io/single-price-grid-component-master/]https://virgile-lab.github.io/single-price-grid-component-master/)
+- Live Site URL: [https://virgile-lab.github.io/single-price-grid-component-master/](https://virgile-lab.github.io/single-price-grid-component-master/)
 
 ### Built with
 
