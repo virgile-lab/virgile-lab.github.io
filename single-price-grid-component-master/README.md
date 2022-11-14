@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/nft-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/nft-preview-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/nft-preview-card-component-main/](https://virgile-lab.github.io/nft-preview-card-component-main/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/single-price-grid-component-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/single-price-grid-component-master)
+- Live Site URL: [https://virgile-lab.github.io/single-price-grid-component-master/]https://virgile-lab.github.io/single-price-grid-component-master/)
 
 ### Built with
 
