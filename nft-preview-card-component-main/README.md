@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/profile-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/profile-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/profile-card-component-main/](https://virgile-lab.github.io/profile-card-component-main/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/nft-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/nft-preview-card-component-main)
+- Live Site URL: [https://virgile-lab.github.io/nft-preview-card-component-main/](https://virgile-lab.github.io/nft-preview-card-component-main/)
 
 ### Built with
 
