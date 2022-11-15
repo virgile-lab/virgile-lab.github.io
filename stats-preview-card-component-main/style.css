@@ -57,6 +57,8 @@ dd {
 ul,
 ol {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -91,7 +93,7 @@ video,
 canvas,
 svg {
     max-width: 100%;
-    display: block;
+    /* display: block; */
 }
 
 
@@ -151,26 +153,26 @@ main {
     max-width: 51.3%;
 }
 
-header h1,
-.stats p {
+.heading h1,
+.stats li {
     color: var(--clr-neutral-100);
 }
 
-header p {
+.heading p {
     color: var(--clr-neutral-75);
 }
 
-.stats span {
+.stats li span {
     color: var(--clr-neutral-60);
 }
 
-header h1 {
+.heading h1 {
     font-size: 3.6em;
     line-height: 1.2;
     letter-spacing: .018rem;
 }
 
-header p {
+.heading p {
     font-size: 1.5em;
     line-height: 1.7;
     letter-spacing: .005rem;
@@ -184,7 +186,7 @@ header p {
     flex-wrap: wrap;
 }
 
-.stats p {
+.stats li {
     display: flex;
     flex-direction: column;
     font-size: 2.4em;
@@ -193,11 +195,11 @@ header p {
     padding-block: 1rem;
 }
 
-.stats p:not(:last-child) {
+.stats li:not(:last-child) {
     margin-right: 6.5rem;
 }
 
-.stats p span {
+.stats li span {
     font-size: 1.2rem;
     font-weight: initial;
     font-family: var(--ff-lexend);
@@ -206,18 +208,14 @@ header p {
 }
 
 .image {
-    position: relative;
-    display: flex;
-    align-items: center;
+    background-color: var(--clr-primary-200);
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
+.image picture img {
     height: 100%;
-    background-color: var(--clr-primary-200);
+    object-fit: cover;
     mix-blend-mode: multiply;
-    backdrop-filter: contrast(50%) brightness(120%);
+    filter: contrast(50%) brightness(120%);
 }
 
 @media only screen and (max-width:650px) {
@@ -228,14 +226,14 @@ header p {
         padding: 4rem 3.5rem 3rem;
         max-width: initial;
     }
-    header h1,
-    header p {
+    .heading h1,
+    .heading p {
         text-align: center;
     }
-    header h1 {
+    .heading h1 {
         font-size: 2.66em;
     }
-    header p {
+    .heading p {
         padding-block: 1.5rem 3rem;
         padding-inline: 0;
         font-size: 1.45rem;
@@ -245,10 +243,10 @@ header p {
         align-items: center;
         text-align: center;
     }
-    .stats p:not(:last-child) {
+    .stats li:not(:last-child) {
         margin-right: 0;
     }
-    .stats p:not(:first-child) {
+    .stats li:not(:first-child) {
         margin-top: 1rem;
     }
 }
