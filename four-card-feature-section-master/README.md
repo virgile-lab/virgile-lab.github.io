@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/stats-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/stats-preview-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/stats-preview-card-component-main/](https://virgile-lab.github.io/stats-preview-card-component-main/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/four-card-feature-section-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/four-card-feature-section-master)
+- Live Site URL: [https://virgile-lab.github.io/four-card-feature-section-master/](https://virgile-lab.github.io/four-card-feature-section-master/)
 
 ### Built with
 
