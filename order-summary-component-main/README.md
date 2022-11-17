@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/four-card-feature-section-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/four-card-feature-section-master)
-- Live Site URL: [https://virgile-lab.github.io/four-card-feature-section-master/](https://virgile-lab.github.io/four-card-feature-section-master/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/order-summary-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/order-summary-component-main)
+- Live Site URL: [https://virgile-lab.github.io/order-summary-component-main/](https://virgile-lab.github.io/order-summary-component-main/)
 
 ### Built with
 
