@@ -104,10 +104,10 @@ svg {
 }
 
 
-/* Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and .payments */
 
 input,
-button,
+.payment,
 textarea,
 select {
     font: inherit;
@@ -142,7 +142,7 @@ main {
     padding: 2.4rem;
     background-image: url(images/pattern-background-mobile.svg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 50vmin;
 }
 
 .card-container {
@@ -227,10 +227,14 @@ a:focus-visible) {
 }
 
 .sub-container button {
-    position: relative;
-    width: 100%;
     border: none;
     background: none;
+    cursor: pointer;
+}
+
+.sub-container .payment {
+    position: relative;
+    width: 100%;
     font-size: 1.5rem;
     font-weight: var(--fw-700);
     letter-spacing: .04rem;
@@ -242,15 +246,14 @@ a:focus-visible) {
     box-shadow: 0 2rem 1rem 0 var(--clr-Pale-Blue);
     transition: all .3s ease-out;
     overflow: hidden;
-    cursor: pointer;
 }
 
-.sub-container button:hover,
-.sub-container button:focus-visible {
+.sub-container .payment:hover,
+.sub-container .payment:focus-visible {
     transform: scale(1.05);
 }
 
-.sub-container button::before {
+.sub-container .payment::before {
     content: '';
     position: absolute;
     background-color: var(--clr-btn-hover);
@@ -262,8 +265,8 @@ a:focus-visible) {
     transition: all .2s ease-out;
 }
 
-.sub-container button:hover::before,
-.sub-container button:focus-visible::before {
+.sub-container .payment:hover::before,
+.sub-container .payment:focus-visible::before {
     width: 100%;
 }
 
@@ -271,7 +274,7 @@ a:focus-visible) {
     font-size: 1.5rem;
     font-weight: var(--fw-900);
     color: var(--clr-neutral-300);
-    width: fit-content;
+    font-family: inherit;
 }
 
 .cancel:hover,
@@ -300,7 +303,7 @@ a:focus-visible) {
     .change {
         font-size: 1.4rem;
     }
-    .sub-container button {
+    .sub-container .payment {
         margin-block: 3.2rem 3.6rem;
     }
 }
