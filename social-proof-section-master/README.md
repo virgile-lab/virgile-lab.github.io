@@ -31,14 +31,15 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/order-summary-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/order-summary-component-main)
-- Live Site URL: [https://virgile-lab.github.io/order-summary-component-main/](https://virgile-lab.github.io/order-summary-component-main/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/social-proof-section-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/social-proof-section-master)
+- Live Site URL: [https://virgile-lab.github.io/social-proof-section-master/](https://virgile-lab.github.io/social-proof-section-master/)
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Flexbox
+- CSS Grid
 - Mobile first approach
 
 ## Author
