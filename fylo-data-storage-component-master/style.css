@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+:root {
+    /*** Layouts ***/
+    --mobileWidth: 375px;
+    --desktopWidth: 1440px;
+    /*** Colors ***/
+    --clr-primary-gradient: 90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%);
+    --clr-neutral-100: rgb(250, 250, 250);
+    --clr-neutral-200: hsl(243, 100%, 93%);
+    --clr-neutral-400: hsl(229, 7%, 55%);
+    --clr-neutral-500: hsl(228, 56%, 26%);
+    --clr-neutral-600: hsl(229, 57%, 11%);
+    --clr-inner-shadow: hsla(243, 100%, 93%, 0.2);
+    --clr-shadow: hsl(229, 57%, 11%);
+    --clr-track: hsl(228, 57%, 17%);
+    /*** Font Size ***/
+    font-size: 10px;
+    /*** Font Weight ***/
+    --fw-400: 400;
+    --fw-700: 700;
+    /*** Typography ***/
+    --ff-primary: 'Raleway', sans-serif;
+    /*** Utilities ***/
+    /* control the percentage of storage */
+    --storage: 81.5%;
+}
+
+
+/*** A Modern CSS Reset by https://piccalil.li/blog/a-modern-css-reset/ ***/
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Remove list styles, margin and padding on ul, ol elements */
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* A elements inherit color */
+
+a {
+    color: inherit;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/*** Utilities ***/
+
+.bold {
+    font-weight: var(--fw-700);
+}
+
+.outer-shadow {
+    box-shadow: 0 .5rem 3rem -1rem var(--clr-shadow);
+}
+
+.inner-shadow {
+    box-shadow: inset 0 0 1rem -.5rem var(--clr-inner-shadow);
+}
+
+.icon-hover:hover,
+.icon-hover:focus-visible {
+    box-shadow: 0 0 0 .2rem var(--clr-neutral-200);
+}
+
+
+/* ----------- */
+
+body {
+    background-color: var(--clr-neutral-600);
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 52.5vmin;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.storage-component-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    min-width: 100vw;
+    padding-inline: clamp(1rem, 5vw, 4rem);
+    padding-block: 2rem 6rem;
+    margin-top: 1.8rem;
+    font-family: var(--ff-primary);
+    color: var(--clr-neutral-200);
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 35rem;
+    gap: 3.2rem;
+    padding: 4rem;
+    border-radius: 1rem 10rem 1rem 1rem;
+    background-color: var(--clr-neutral-500);
+}
+
+.features-container .logo {
+    width: fit-content;
+}
+
+.features-container .features {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.features-container .features input,
+.upload-button {
+    object-fit: none;
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--clr-neutral-600);
+    transition: all .2s ease-out;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-button {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.storage-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 100%;
+    max-width: 54rem;
+    gap: 1rem;
+    padding: 4rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    background-color: var(--clr-neutral-500);
+}
+
+.used-storage {
+    letter-spacing: -.04rem;
+    margin-bottom: .5rem;
+}
+
+.tooltip-remaining-space {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    gap: 1rem;
+    right: 4rem;
+    top: -30%;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem 1rem 0 1rem;
+    background-color: var(--clr-neutral-100);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-out;
+}
+
+.tooltip-remaining-space::before {
+    content: '';
+    position: absolute;
+    top: 99.9%;
+    right: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid var(--clr-neutral-100);
+    border-top: 1rem solid var(--clr-neutral-100);
+    border-bottom: 1rem solid transparent;
+}
+
+.remaining-space {
+    font-size: 4rem;
+    letter-spacing: 0;
+    color: var(--clr-neutral-600);
+}
+
+.remaining-space-unit {
+    font-size: 1.2rem;
+    font-weight: var(--fw-700);
+    letter-spacing: .1rem;
+    color: var(--clr-neutral-400);
+}
+
+.storage-container:hover .tooltip-remaining-space,
+.storage-container:focus-visible .tooltip-remaining-space {
+    visibility: visible;
+    opacity: 1;
+}
+
+.used-storage-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--clr-track);
+}
+
+.bar-container {
+    position: absolute;
+    width: calc(100% - .6rem);
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transform: translateX(.3rem);
+}
+
+.bar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 1.4rem;
+    width: 100%;
+    border-radius: 1rem;
+    transform: translateX(calc(-100% + (var(--storage))));
+    background: linear-gradient(var(--clr-primary-gradient));
+    animation: loading-bar 1s ease-in-out forwards;
+}
+
+.bar::before {
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: .3rem;
+    background-color: var(--clr-neutral-200);
+}
+
+@keyframes loading-bar {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(calc(-100% + (var(--storage))));
+    }
+}
+
+.bar-border {
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: inset 0 0 0 .3rem var(--clr-track);
+    /* opacity: .3; */
+    /* transform: translateX(-.3rem); */
+}
+
+.storage-container .storage-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+
+/*** Mobile version ***/
+
+@media only screen and (max-width:700px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: cover;
+    }
+    .storage-component-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .storage-container {
+        align-self: initial;
+        max-width: 35rem;
+    }
+    .tooltip-remaining-space {
+        right: calc(50% - 9rem);
+        top: initial;
+        bottom: -30%;
+        border-radius: 1rem;
+    }
+    .tooltip-remaining-space::before {
+        content: '';
+        position: absolute;
+        top: -1.9rem;
+        right: calc(50% - 1rem);
+        bottom: initial;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-top: 1rem solid transparent;
+        border-bottom: 1rem solid var(--clr-neutral-100);
+    }
+}
+
+
+/* if user can't hover */
+
+@media (hover: none) {
+    .tooltip-remaining-space {
+        opacity: 1;
+        visibility: visible;
+    }
+}

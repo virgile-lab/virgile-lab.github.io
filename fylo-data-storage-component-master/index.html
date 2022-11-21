@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <div class="storage-component-container">
+
+            <div class="features-container inner-shadow outer-shadow">
+
+                <img class="logo" src="images/logo.svg" alt="Logo" aria-hidden="true">
+
+                <div class="features">
+                    <input type="image" class="icon-hover" title="Access your documents" src="images/icon-document.svg" alt="Document Icon" aria-label="Click to access your documents">
+
+                    <input type="image" class="icon-hover" title="Access your folders" src="images/icon-folder.svg" alt="Folder Icon" aria-label="Click to access your folder">
+
+                    <label for="inputFile" class="upload-button icon-hover" tabindex="0" title="Upload a file"><img src="images/icon-upload.svg" alt="Upload Icon" aria-label="Click to upload a file"><input type="file" id="inputFile"></label>
+                </div>
+
+            </div>
+
+            <div class="storage-container inner-shadow outer-shadow" tabindex="0">
+
+                <div class="tooltip-remaining-space">
+                    <span class="remaining-space bold">185</span>
+                    <span class="remaining-space-unit">GB LEFT</span>
+                </div>
+
+                <span class="used-storage">You’ve used <span class="bold">815 GB</span> of your storage</span>
+
+                <div class="used-storage-bar">
+                    <div class="bar-container">
+                        <span class="bar"></span>
+                    </div>
+                    <span class="bar-border"></span>
+                </div>
+
+                <div class="storage-range bold">
+                    <span class="storage-min">0 GB</span>
+                    <span class="storage-max">1000 GB</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
