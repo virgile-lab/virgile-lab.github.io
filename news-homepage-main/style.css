@@ -219,6 +219,7 @@ body {
     justify-content: center;
     padding-inline: clamp(1.6rem, 4vw, 3rem);
     padding-block: 0 5rem;
+    background-color: var(--clr-neutral-100);
     /* background-image: url(design/desktop-design.jpg);
     background-repeat: no-repeat; */
 }
