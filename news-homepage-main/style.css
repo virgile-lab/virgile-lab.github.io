@@ -135,17 +135,18 @@ body {
     font-size: 1.5rem;
     line-height: 1.7;
     font-family: var(--ff-primary);
+    background-color: var(--clr-neutral-100);
 }
 
 h1 {
     line-height: 1;
-    font-size: 4rem;
+    font-size: clamp(4rem, 6vw, 5.8rem);
     font-weight: var(--fw-800);
     color: var(--clr-neutral-900);
 }
 
 h2 {
-    font-size: 3.2rem;
+    font-size: clamp(3.2rem, 6vw, 4rem);
     color: var(--clr-primary-orange);
 }
 
@@ -216,14 +217,15 @@ ol li article h4::before {
 body {
     display: flex;
     justify-content: center;
-    padding-inline: 1.6rem;
+    padding-inline: clamp(1.6rem, 4vw, 3rem);
     padding-block: 0 5rem;
-    /* background-image: url(design/mobile-design.jpg); */
+    /* background-image: url(design/desktop-design.jpg);
+    background-repeat: no-repeat; */
 }
 
 header,
 main {
-    max-width: 1080px;
+    max-width: 111rem;
 }
 
 
@@ -235,11 +237,11 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 2.8rem 3.2rem;
+    padding-block: clamp(2.8rem, 8vw, 9rem) clamp(3.2rem, 8vw, 5.4rem);
 }
 
 header nav .logo img {
-    max-height: 2.8rem;
+    max-height: clamp(2.8rem, 4.5vw, 4rem);
 }
 
 header nav ul {
@@ -259,7 +261,7 @@ header nav ul {
 
 header nav ul li {
     padding-inline: 3rem 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
     width: fit-content;
     color: var(--clr-neutral-400);
@@ -346,31 +348,37 @@ button:focus-visible) {
 .ordered-articles ol li {
     display: flex;
     color: var(--clr-neutral-400);
-    /* align-items: center; */
+}
+
+.ordered-articles ol li article {
+    height: 100%;
 }
 
 .ordered-articles ol li img {
     margin-inline: 0 2.4rem;
     max-width: 10rem;
-    height: 100%;
     object-fit: cover;
+}
+
+@media screen and (min-width:500px) {
+    .ordered-articles ol {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:868px) {
+    .ordered-articles ol li {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+    }
+    .ordered-articles ol li img {
+        min-width: 100%;
+    }
 }
 
 @media screen and (min-width:768px) {
     main section:not(:last-child) {
         margin-block: initial;
-    }
-    h1 {
-        font-size: 5.8rem;
-    }
-    h2 {
-        font-size: 4rem;
-    }
-    header nav {
-        padding-block: 8rem 6rem;
-    }
-    header nav .logo img {
-        max-height: initial;
     }
     header nav ul {
         position: initial;
@@ -378,7 +386,7 @@ button:focus-visible) {
         min-height: initial;
         padding-block: initial;
         flex-direction: row;
-        gap: 3rem;
+        gap: 3.8rem;
     }
     header nav ul li {
         padding-inline: initial;
@@ -390,21 +398,27 @@ button:focus-visible) {
         display: grid;
         grid-template-areas: "main main new" "main main new" "ord-art ord-art ord-art";
         grid-template-columns: repeat(3, 1fr);
-        gap: 6.4rem 3rem;
+        gap: 7.4rem 3rem;
     }
     .main-article {
         grid-area: main;
     }
     .main-article article {
-        display: flex;
-        gap: 3rem;
+        display: grid;
+        grid-template-areas: "pic pic" "title p";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 3rem;
         align-items: center;
     }
+    .main-article article picture {
+        grid-area: pic;
+    }
     .main-article article h1 {
-        flex-basis: 50%;
+        grid-area: title;
     }
     .main-article article div {
-        flex-basis: 50%;
+        grid-area: p;
+        line-height: 1.6;
     }
     .main-article p {
         margin-block: 0rem 3.8rem;
@@ -416,39 +430,10 @@ button:focus-visible) {
     .ordered-articles {
         grid-area: ord-art;
     }
-    .ordered-articles ol {
-        display: flex;
-    }
-    .ordered-articles ol li {
-        flex-basis: 50%;
-        /* flex-grow: 1; */
-    }
 }
 
-@media screen and (min-width:768px) and (max-width:1080px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
     main {
         grid-template-areas: "main main main" "new new new" "ord-art ord-art ord-art";
-    }
-}
-
-@media screen and (min-width:500px) and (max-width:768px) {
-    .ordered-articles ol {
-        display: flex;
-        gap: 2rem;
-    }
-    .ordered-articles ol li {
-        display: flex;
-        flex-basis: 50%;
-        flex-direction: column-reverse;
-        gap: 1.5rem;
-    }
-    .ordered-articles ol li article {
-        height: 100%;
-    }
-    .ordered-articles ol li img {
-        margin-block: 0 2.4rem;
-        min-width: 100%;
-        max-height: 10rem;
-        object-fit: cover;
     }
 }
