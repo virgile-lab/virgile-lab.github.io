@@ -215,7 +215,7 @@ ol li article h4::before {
 /*** End Utilities ***/
 
 body {
-    display: flex;
+    display: grid;
     justify-content: center;
     padding-inline: clamp(1.6rem, 4vw, 3rem);
     padding-block: 0 5rem;
@@ -268,8 +268,8 @@ header nav ul li {
     color: var(--clr-neutral-400);
 }
 
-header nav ul :is(li:hover,
-li:focus-visible) {
+header nav ul li :is(a:hover,
+a:focus-visible) {
     color: var(--clr-primary-red);
 }
 
@@ -349,17 +349,13 @@ button:focus-visible) {
 .ordered-articles ol li {
     display: flex;
     color: var(--clr-neutral-400);
-}
-
-.ordered-articles ol li article {
-    height: 100%;
+    justify-content: space-between;
 }
 
 .ordered-articles ol li .oa-image {
     margin-inline: 0 2.4rem;
     max-width: 10rem;
     overflow: hidden;
-    height: 100%;
     min-width: 10rem;
 }
 
@@ -370,8 +366,9 @@ button:focus-visible) {
     transition: all .4s ease-in-out;
 }
 
-.ordered-articles ol li:hover .oa-image img {
-    transform: scale(1.1);
+.ordered-articles ol :is(li:hover,
+li:focus-within) .oa-image img {
+    transform: scale(1.2);
 }
 
 @media screen and (min-width:500px) {
@@ -386,7 +383,7 @@ button:focus-visible) {
         gap: 1.5rem;
     }
     .ordered-articles ol li .oa-image {
-        /* min-width: 100%; */
+        min-width: 100%;
     }
 }
 
