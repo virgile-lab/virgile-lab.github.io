@@ -131,6 +131,14 @@ select {
 
 /*** Utilities ***/
 
+.black-blue {
+    color: var(--clr-primary-gray-blue);
+}
+
+.neutral-300 {
+    color: var(--clr-neutral-300);
+}
+
 
 /*** End Utilities ***/
 
@@ -181,7 +189,6 @@ section article:nth-child(2) {
 
 section article:nth-child(3) {
     grid-area: art3;
-    color: var(--clr-primary-gray-blue);
     background-color: var(--clr-neutral-100);
 }
 
@@ -192,7 +199,6 @@ section article:nth-child(4) {
 
 section article:nth-child(5) {
     grid-area: art5;
-    color: var(--clr-primary-gray-blue);
     background-color: var(--clr-neutral-100);
 }
 
@@ -202,7 +208,7 @@ article .infos {
 }
 
 article .infos img {
-    border: .2rem solid var(--clr-neutral-200);
+    border: .2rem solid var(--clr-neutral-300);
     border-radius: 50%;
     max-width: 3rem;
     margin-right: 1.6rem;
@@ -237,7 +243,7 @@ article .review {
 
 @media screen and (min-width:768px) and (max-width:950px) {
     section {
-        grid-template-areas: "art1 art1 art4 art4" "art5 art5 art5 art5" "art2 art2 art3 art3";
+        grid-template-areas: "art1 art1 art4 art4" "art5 art5 art2 art2" "art5 art5 art3 art3";
     }
 }
 
