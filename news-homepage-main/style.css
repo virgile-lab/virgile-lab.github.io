@@ -355,10 +355,23 @@ button:focus-visible) {
     height: 100%;
 }
 
-.ordered-articles ol li img {
+.ordered-articles ol li .oa-image {
     margin-inline: 0 2.4rem;
     max-width: 10rem;
+    overflow: hidden;
+    height: 100%;
+    min-width: 10rem;
+}
+
+.ordered-articles ol li .oa-image img {
     object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    transition: all .4s ease-in-out;
+}
+
+.ordered-articles ol li:hover .oa-image img {
+    transform: scale(1.1);
 }
 
 @media screen and (min-width:500px) {
@@ -372,8 +385,8 @@ button:focus-visible) {
         flex-direction: column-reverse;
         gap: 1.5rem;
     }
-    .ordered-articles ol li img {
-        min-width: 100%;
+    .ordered-articles ol li .oa-image {
+        /* min-width: 100%; */
     }
 }
 
