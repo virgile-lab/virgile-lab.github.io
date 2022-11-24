@@ -249,59 +249,43 @@ header .logo img {
     max-height: clamp(2.8rem, 4.5vw, 4rem);
 }
 
-header nav {
+.primary-nav {
     display: flex;
 }
 
 .primary-nav ul {
     position: absolute;
+    display: flex;
     right: 0;
     top: 0;
-    min-width: clamp(60vw, 30rem, 100vw);
+    width: 0;
     min-height: 100vh;
     background-color: var(--clr-neutral-100);
     padding-block: clamp(2rem, 30vh, 15rem) 0rem;
-    display: none;
+    padding-inline: 3rem 0;
     flex-direction: column;
     gap: clamp(.5rem, 3vh, 2rem);
     overflow: hidden;
     z-index: 99;
-    transform: translateX(100%);
-    transition: transform 1s ease-out;
+    transition: width .3s ease-out, visibility .3s ease-out;
+    visibility: hidden;
 }
 
 .primary-nav[data-visible="true"] ul {
-    transform: translateX(0%);
+    visibility: visible;
+    width: clamp(60vw, 30rem, 100vw);
 }
 
-.primary-nav ul li {
-    padding-inline: 3rem 0;
+.primary-nav ul li a {
     font-size: 1.6rem;
+    padding: .5rem;
     cursor: pointer;
-    width: fit-content;
     color: var(--clr-neutral-400);
 }
 
 .primary-nav ul li :is(a:hover,
 a:focus-visible) {
     color: var(--clr-primary-red);
-}
-
-.primary-nav .screen-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
-    min-width: 0vw;
-    background-color: transparent;
-    backdrop-filter: brightness(50%);
-    opacity: 0;
-    transition: opacity .3s ease-out;
-}
-
-.primary-nav[data-visible="true"] .screen-overlay {
-    min-width: 100vw;
-    opacity: 1;
 }
 
 .primary-nav .toggle-menu {
@@ -318,6 +302,23 @@ a:focus-visible) {
 
 .primary-nav[data-visible="true"] .toggle-menu {
     background-image: url(assets/images/icon-menu-close.svg);
+}
+
+.primary-nav .screen-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 0vw;
+    background-color: transparent;
+    backdrop-filter: brightness(50%) blur(.2rem);
+    opacity: 0;
+    transition: opacity .3s ease-out;
+}
+
+.primary-nav[data-visible="true"] .screen-overlay {
+    min-width: 100vw;
+    opacity: 1;
 }
 
 
