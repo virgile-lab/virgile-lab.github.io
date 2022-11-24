@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="primary-nav" data-visible="false">
             <div class="logo">
                 <a href="#"><img src="assets/images/logo.svg" alt="" aria-hidden="true"></a>
             </div>
@@ -26,8 +26,8 @@
                 <li><a href="#">Trending</a></li>
                 <li><a href="#">Categories</a></li>
             </ul>
-            <div class="screen-filter"></div>
-            <span class="menu-icon" tabindex="1" onclick="displayMenu()"><img src="assets/images/icon-menu.svg" alt="Menu Icon" aria-label="Click to access the menu"></span>
+            <div class="screen-overlay"></div>
+            <button class="toggle-menu"></button>
         </nav>
     </header>
     <main>
