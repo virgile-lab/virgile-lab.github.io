@@ -308,8 +308,6 @@ a:focus-visible) {
     background-color: var(--clr-neutral-900);
     -webkit-mask: url(assets/images/icon-menu.svg) no-repeat 50% 50%;
     mask: url(assets/images/icon-menu.svg) no-repeat 50% 50%;
-    /* background-repeat: no-repeat;
-    background-position: center; */
     min-width: 4rem;
     aspect-ratio: 1;
     z-index: 9999;
