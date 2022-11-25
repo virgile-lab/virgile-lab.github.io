@@ -236,7 +236,7 @@ main {
 } */
 
 
-/* header */
+/*** Header ***/
 
 header {
     display: flex;
@@ -248,6 +248,17 @@ header {
 header .logo img {
     max-height: clamp(2.8rem, 4.5vw, 4rem);
 }
+
+.mode-toggle[data-mode="dark"]+.logo {
+    filter: invert(90%);
+}
+
+.mode-toggle[data-mode="dark"]+.toggle-menu {
+    filter: invert();
+}
+
+
+/* Primary Nav */
 
 .primary-nav {
     display: flex;
@@ -322,7 +333,52 @@ a:focus-visible) {
 }
 
 
-/* end header */
+/* End Primary Nav */
+
+
+/* Dark/Light Mode */
+
+.mode-toggle {
+    border: .1rem solid var(--clr-primary-orange);
+    width: 4rem;
+    height: 2.1rem;
+    border-radius: 2rem;
+    position: absolute;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-neutral-100);
+}
+
+.mode-toggle::before {
+    content: '';
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--clr-primary-orange);
+    position: absolute;
+    border-radius: 50%;
+    left: .25rem;
+    transition: transform .3s ease-out;
+}
+
+.mode-toggle[data-mode="dark"]::before {
+    transform: translateX(1.7rem);
+    background-color: var(--clr-primary-red);
+}
+
+
+/* End Dark/Light Mode */
+
+
+/*** End Header ***/
+
+
+/*** Main ***/
+
+
+/* Main Article */
 
 .main-article picture {
     margin-bottom: 2.5rem;
@@ -357,6 +413,12 @@ button:focus-visible) {
     background-color: var(--clr-neutral-900);
 }
 
+
+/* End Main Article */
+
+
+/* New Articles */
+
 .new-articles {
     background-color: var(--clr-neutral-900);
     height: fit-content;
@@ -375,6 +437,12 @@ button:focus-visible) {
     color: var(--clr-neutral-400);
     padding-block: .4rem 2.8rem;
 }
+
+
+/* End New Articles */
+
+
+/* Ordered Articles */
 
 .ordered-articles ol {
     display: grid;
@@ -407,6 +475,12 @@ li:focus-within) .oa-image img {
     transform: scale(1.2);
 }
 
+
+/* End Ordered Articles */
+
+
+/*** End Main ***/
+
 @media screen and (min-width:500px) {
     .ordered-articles ol {
         grid-template-columns: repeat(3, 1fr);
@@ -432,7 +506,6 @@ li:focus-within) .oa-image img {
         width: unset;
         min-height: initial;
         padding-block: initial;
-        transform: unset;
         flex-direction: row;
         gap: 3.8rem;
         visibility: visible;
