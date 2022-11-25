@@ -245,17 +245,21 @@ header {
     padding-block: clamp(2.8rem, 8vw, 9rem) clamp(3.2rem, 8vw, 5.4rem);
 }
 
-header .logo img {
-    max-height: clamp(2.8rem, 4.5vw, 4rem);
+
+/* Logo */
+
+header .logo {
+    background-color: var(--clr-neutral-900);
+    height: clamp(4rem, 6vw, 6.5rem);
+    aspect-ratio: 1;
+    -webkit-mask: url("assets/images/logo.svg") no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    mask: url("assets/images/logo.svg") no-repeat 50% 50%;
+    mask-size: contain;
 }
 
-.mode-toggle[data-mode="dark"]+.logo {
-    filter: invert(90%);
-}
 
-.mode-toggle[data-mode="dark"]+.toggle-menu {
-    filter: invert();
-}
+/* End Logo */
 
 
 /* Primary Nav */
@@ -301,10 +305,11 @@ a:focus-visible) {
 
 .primary-nav .toggle-menu {
     border: none;
-    background-color: transparent;
-    background-image: url(assets/images/icon-menu.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: var(--clr-neutral-900);
+    -webkit-mask: url(assets/images/icon-menu.svg) no-repeat 50% 50%;
+    mask: url(assets/images/icon-menu.svg) no-repeat 50% 50%;
+    /* background-repeat: no-repeat;
+    background-position: center; */
     min-width: 4rem;
     aspect-ratio: 1;
     z-index: 9999;
@@ -312,7 +317,8 @@ a:focus-visible) {
 }
 
 .primary-nav[data-visible="true"] .toggle-menu {
-    background-image: url(assets/images/icon-menu-close.svg);
+    -webkit-mask: url(assets/images/icon-menu-close.svg) no-repeat 50% 50%;
+    mask: url(assets/images/icon-menu-close.svg) no-repeat 50% 50%;
 }
 
 .primary-nav .screen-overlay {
@@ -338,21 +344,21 @@ a:focus-visible) {
 
 /* Dark/Light Mode */
 
-.mode-toggle {
+.toggle-mode {
     border: .1rem solid var(--clr-primary-orange);
     width: 4rem;
     height: 2.1rem;
     border-radius: 2rem;
     position: absolute;
     cursor: pointer;
-    top: 2rem;
-    right: 3rem;
+    top: clamp(.5rem, 2vw, 2rem);
+    right: clamp(1.6rem, 4vw, 3rem);
     display: flex;
     align-items: center;
-    background-color: var(--clr-neutral-100);
+    background-color: transparent;
 }
 
-.mode-toggle::before {
+.toggle-mode::before {
     content: '';
     height: 1.5rem;
     width: 1.5rem;
@@ -363,9 +369,8 @@ a:focus-visible) {
     transition: transform .3s ease-out;
 }
 
-.mode-toggle[data-mode="dark"]::before {
+.toggle-mode[data-mode="dark"]::before {
     transform: translateX(1.7rem);
-    background-color: var(--clr-primary-red);
 }
 
 

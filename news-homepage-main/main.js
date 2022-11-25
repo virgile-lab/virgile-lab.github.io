@@ -48,26 +48,26 @@ screenOverlay.addEventListener('click', () => {
 
 /* Dark/Light Mode */
 
-const btnToggle = document.querySelector(".mode-toggle");
+const toggleMode = document.querySelector(".toggle-mode");
 
 function darkMode() {
-    btnToggle.setAttribute('data-mode', 'dark');
+    toggleMode.setAttribute('data-mode', 'dark');
     document.documentElement.style.setProperty('--clr-neutral-100', 'hsl(240, 100%, 5%)');
     document.documentElement.style.setProperty('--clr-neutral-400', 'hsl(236, 13%, 60%)');
     document.documentElement.style.setProperty('--clr-neutral-900', 'hsl(240, 18%, 35%)');
 }
 
 function lightMode() {
-    btnToggle.setAttribute('data-mode', 'light');
+    toggleMode.setAttribute('data-mode', 'light');
     document.documentElement.style.setProperty('--clr-neutral-100', 'hsl(36, 100%, 99%)');
     document.documentElement.style.setProperty('--clr-neutral-400', 'hsl(236, 13%, 42%)');
     document.documentElement.style.setProperty('--clr-neutral-900', 'hsl(240, 100%, 5%)');
 }
 
-btnToggle.addEventListener('click', () => {
-    var darkLight = btnToggle.getAttribute('data-mode');
+toggleMode.addEventListener('click', () => {
+    var modeData = toggleMode.getAttribute('data-mode');
 
-    if (darkLight === "light") {
+    if (modeData === "light") {
         darkMode();
         localStorage.setItem('mode', 'dark')
     } else {
@@ -78,15 +78,15 @@ btnToggle.addEventListener('click', () => {
 
 
 
-function modeStore() {
-    var modeStore = localStorage.getItem('mode');
-    if (modeStore === "dark") {
-        darkMode();
-    } else {
+function modeStorage() {
+    var modeStorage = localStorage.getItem('mode');
+    if (modeStorage === "light") {
         lightMode();
+    } else {
+        darkMode();
     }
 };
 
-modeStore();
+modeStorage();
 
 /* End Dark/Light Mode */
