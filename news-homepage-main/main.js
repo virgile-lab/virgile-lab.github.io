@@ -94,7 +94,7 @@ if (tooltipStorage != "true") {
 
         setTimeout(() => {
             tooltipToggleTheme.setAttribute('data-display', 'false');
-        }, 3000)
+        }, 5000)
 
         localStorage.setItem('theme', 'dark')
         localStorage.setItem('tooltip', 'true');
@@ -107,7 +107,7 @@ if (tooltipStorage != "true") {
 
         setTimeout(() => {
             tooltipToggleTheme.setAttribute('data-display', 'false');
-        }, 3000)
+        }, 5000)
 
         localStorage.setItem('theme', 'light')
         localStorage.setItem('tooltip', 'true');

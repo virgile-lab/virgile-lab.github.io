@@ -394,7 +394,7 @@ a:focus-visible) {
     display: flex;
     align-items: center;
     background-color: transparent;
-    opacity: .6;
+    opacity: .7;
     transform: scale(.8);
 }
 
