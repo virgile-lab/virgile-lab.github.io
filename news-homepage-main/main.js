@@ -46,47 +46,97 @@ screenOverlay.addEventListener('click', () => {
 
 /* End Menu Toggle */
 
-/* Dark/Light Mode */
+/* Dark/Light Theme */
 
-const toggleMode = document.querySelector(".toggle-mode");
+// function activateDarkMode() {
+//     // set style to dark
+//   }
 
-function darkMode() {
-    toggleMode.setAttribute('data-mode', 'dark');
+//   // MediaQueryList
+//   const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
+
+//   // recommended method for newer browsers: specify event-type as first argument
+//   darkModePreference.addEventListener("change", e => e.matches && activateDarkMode());
+
+const browserThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const browserThemeLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+const tooltipToggleTheme = document.querySelector(".toggle-theme-tooltip");
+const toggleThemeBtn = document.querySelector(".toggle-theme-btn");
+var tooltipStorage = localStorage.getItem('tooltip');
+
+
+
+function darkTheme() {
+    // Change value of HTML attribute "data-theme" in "dark"
+    toggleThemeBtn.setAttribute('data-theme', 'dark');
+    // Dark theme colors and properties
     document.documentElement.style.setProperty('--clr-neutral-100', 'hsl(240, 100%, 5%)');
     document.documentElement.style.setProperty('--clr-neutral-400', 'hsl(236, 13%, 60%)');
     document.documentElement.style.setProperty('--clr-neutral-900', 'hsl(240, 18%, 35%)');
 }
 
-function lightMode() {
-    toggleMode.setAttribute('data-mode', 'light');
+function lightTheme() {
+    // Change value of HTML attribute "data-theme" in "light"
+    toggleThemeBtn.setAttribute('data-theme', 'light');
+    // Light theme colors and properties
     document.documentElement.style.setProperty('--clr-neutral-100', 'hsl(36, 100%, 99%)');
     document.documentElement.style.setProperty('--clr-neutral-400', 'hsl(236, 13%, 42%)');
     document.documentElement.style.setProperty('--clr-neutral-900', 'hsl(240, 100%, 5%)');
 }
 
-toggleMode.addEventListener('click', () => {
-    var modeData = toggleMode.getAttribute('data-mode');
 
-    if (modeData === "light") {
-        darkMode();
-        localStorage.setItem('mode', 'dark')
+if (tooltipStorage != "true") {
+    if (browserThemeDark) {
+
+        darkTheme();
+        tooltipToggleTheme.innerHTML = "Dark theme applied based on your browser preferences";
+        tooltipToggleTheme.setAttribute('data-display', 'true');
+
+        setTimeout(() => {
+            tooltipToggleTheme.setAttribute('data-display', 'false');
+        }, 3000)
+
+        localStorage.setItem('theme', 'dark')
+        localStorage.setItem('tooltip', 'true');
+
+    } else if (browserThemeLight) {
+
+        lightTheme();
+        tooltipToggleTheme.innerHTML = "Light theme applied based on your browser preferences";
+        tooltipToggleTheme.setAttribute('data-display', 'true');
+
+        setTimeout(() => {
+            tooltipToggleTheme.setAttribute('data-display', 'false');
+        }, 3000)
+
+        localStorage.setItem('theme', 'light')
+        localStorage.setItem('tooltip', 'true');
+    }
+}
+
+// Change the theme on click on the toggle button
+toggleThemeBtn.addEventListener('click', () => {
+    var themeData = toggleThemeBtn.getAttribute('data-theme');
+
+    if (themeData === "light") {
+        darkTheme();
+        localStorage.setItem('theme', 'dark')
     } else {
-        lightMode();
-        localStorage.setItem('mode', 'light')
+        lightTheme();
+        localStorage.setItem('theme', 'light')
     }
 })
 
 
-
-function modeStorage() {
-    var modeStorage = localStorage.getItem('mode');
-    if (modeStorage === "light") {
-        lightMode();
+function themeStorage() {
+    var themeStorage = localStorage.getItem('theme');
+    if (themeStorage === "light") {
+        lightTheme();
     } else {
-        darkMode();
+        darkTheme();
     }
 };
 
-modeStorage();
+themeStorage();
 
-/* End Dark/Light Mode */
+/* End Dark/Light Theme */
