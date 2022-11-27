@@ -1,11 +1,9 @@
-/* Menu Toggle */
+/*** Toggle Primary Nav ***/
 
 const toggleMenu = document.querySelector(".toggle-menu");
 const primaryNav = document.querySelector(".primary-nav");
 const bodyDocument = document.querySelector("body");
 const screenOverlay = document.querySelector(".screen-overlay");
-
-
 
 window.addEventListener('resize', () => {
 
@@ -15,17 +13,14 @@ window.addEventListener('resize', () => {
 
         bodyDocument.style.overflowY = "scroll";
         primaryNav.setAttribute('data-visible', 'false');
-
     }
 });
-
 
 toggleMenu.addEventListener('click', () => {
 
     var visibility = primaryNav.getAttribute('data-visible');
 
     if (visibility === 'false') {
-
         bodyDocument.style.overflowY = "hidden";
         primaryNav.setAttribute('data-visible', 'true');
 
@@ -33,20 +28,17 @@ toggleMenu.addEventListener('click', () => {
 
         bodyDocument.style.overflowY = "scroll";
         primaryNav.setAttribute('data-visible', 'false');
-
     }
 });
 
 screenOverlay.addEventListener('click', () => {
-
     bodyDocument.style.overflowY = "scroll";
     primaryNav.setAttribute('data-visible', 'false');
-
 });
 
-/* End Menu Toggle */
+/*** End Toggle Primary Nav ***/
 
-/* Dark/Light Theme */
+/*** Dark/Light Theme ***/
 
 // function activateDarkMode() {
 //     // set style to dark
@@ -58,13 +50,13 @@ screenOverlay.addEventListener('click', () => {
 //   // recommended method for newer browsers: specify event-type as first argument
 //   darkModePreference.addEventListener("change", e => e.matches && activateDarkMode());
 
-const browserThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-const browserThemeLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
 const tooltipToggleTheme = document.querySelector(".toggle-theme-tooltip");
 const toggleThemeBtn = document.querySelector(".toggle-theme-btn");
-var tooltipStorage = localStorage.getItem('tooltip');
 
 
+
+/* Colors and properties of themes */
 
 function darkTheme() {
     // Change value of HTML attribute "data-theme" in "dark"
@@ -84,6 +76,16 @@ function lightTheme() {
     document.documentElement.style.setProperty('--clr-neutral-900', 'hsl(240, 100%, 5%)');
 }
 
+/* End Colors and properties of themes */
+
+/* Browser color scheme detection */
+
+//Detect and apply the theme matches the browser preferences, and display a tooltip message
+
+const browserThemeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const browserThemeLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+var tooltipStorage = localStorage.getItem('tooltip');
+const tooltipTimeDisplay = 5000; // Tooltip time displaying on screen
 
 if (tooltipStorage != "true") {
     if (browserThemeDark) {
@@ -94,7 +96,7 @@ if (tooltipStorage != "true") {
 
         setTimeout(() => {
             tooltipToggleTheme.setAttribute('data-display', 'false');
-        }, 5000)
+        }, tooltipTimeDisplay)
 
         localStorage.setItem('theme', 'dark')
         localStorage.setItem('tooltip', 'true');
@@ -107,36 +109,44 @@ if (tooltipStorage != "true") {
 
         setTimeout(() => {
             tooltipToggleTheme.setAttribute('data-display', 'false');
-        }, 5000)
+        }, tooltipTimeDisplay)
 
         localStorage.setItem('theme', 'light')
         localStorage.setItem('tooltip', 'true');
     }
 }
 
-// Change the theme on click on the toggle button
+/* End Browser color scheme detection */
+
+/* Apply and store the theme on click on the toggle button */
+
 toggleThemeBtn.addEventListener('click', () => {
     var themeData = toggleThemeBtn.getAttribute('data-theme');
 
     if (themeData === "light") {
         darkTheme();
-        localStorage.setItem('theme', 'dark')
+        localStorage.setItem('theme', 'dark');
     } else {
         lightTheme();
-        localStorage.setItem('theme', 'light')
+        localStorage.setItem('theme', 'light');
     }
-})
+});
 
+/* End Apply and store the theme on click on the toggle button */
 
-function themeStorage() {
-    var themeStorage = localStorage.getItem('theme');
-    if (themeStorage === "light") {
+/* Apply the user theme choice */
+
+function applyThemeStore() {
+    var themeStore = localStorage.getItem('theme');
+    if (themeStore === "light") {
         lightTheme();
     } else {
         darkTheme();
     }
 };
 
-themeStorage();
+applyThemeStore();
 
-/* End Dark/Light Theme */
+/* End Apply the user theme choice */
+
+/*** End Dark/Light Theme ***/
