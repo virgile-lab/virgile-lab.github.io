@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.903 32.903">
+  <defs>
+    <style>
+      .a {
+        fill: #fff;
+      }
+
+      .b, .c, .d {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .b {
+        stroke: #656fc6;
+        stroke-linecap: round;
+      }
+
+      .b, .c {
+        stroke-miterlimit: 10;
+      }
+
+      .c, .d {
+        stroke: #6dbdd5;
+      }
+
+      .d {
+        stroke-linejoin: bevel;
+      }
+    </style>
+  </defs>
+  <title>frontend_mentor</title>
+  <g>
+    <circle class="a" cx="16.452" cy="16.452" r="16.452"/>
+    <path class="b" d="M8.452,14.968s1.161,8.661,10.838,8.661"/>
+    <line class="c" x1="16.452" y1="8.581" x2="16.452" y2="19.298"/>
+    <polyline class="d" points="25.226 12.127 19.935 14.323 25.226 16.507"/>
+  </g>
+</svg>

@@ -1,0 +1,211 @@
+:root {
+    /*Layouts*/
+    --mobileWidth: 375px;
+    --desktopWidth: 1440px;
+    /* Colors */
+    --primary-100: hsl(185, 75%, 39%);
+    --primary-300: hsl(229, 23%, 23%);
+    --primary-200: hsl(227, 10%, 46%);
+    --neutral-100: rgb(255, 255, 255);
+    --neutral-150: hsl(0, 0%, 90%);
+    --neutral-200: hsl(0, 0%, 59%);
+    --shadow: hsla(185, 75%, 12%, .6);
+    /* Font Size */
+    --fs-primary: 18px;
+    /* Font Weight */
+    --fw-400: 400;
+    --fw-700: 700;
+    /* Typography */
+    --ff-primary: 'Kumbh Sans', sans-serif;
+}
+
+
+/*** A Modern CSS Reset by https://piccalil.li/blog/a-modern-css-reset/ ***/
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+    font-size: 16px;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture {
+    /* max-width: 100%; */
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1.5em;
+    font-family: var(--ff-primary);
+    background-color: var(--primary-100);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 38vh, left 50vw top 50vh;
+}
+
+.card-container {
+    width: 21.875em;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: var(--neutral-100);
+    box-shadow: 0 3em 6em -1em var(--shadow);
+}
+
+.card-profile {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 17.85em;
+    border-bottom: 1px solid var(--neutral-150);
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.image-profile {
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid var(--neutral-100);
+    transform: translateY(-2.5px);
+}
+
+.info-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    height: 100%;
+    gap: .8em;
+    padding-bottom: 1.6em;
+}
+
+.name {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5em;
+    font-size: var(--fs-primary);
+    font-weight: var(--fw-700);
+    color: var(--primary-300);
+}
+
+.age,
+.city {
+    color: var(--primary-200);
+    font-weight: var(--fw-400);
+}
+
+.city {
+    font-size: .9em;
+}
+
+.card-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1.6em .8em;
+}
+
+.card-stats p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: var(--fs-primary);
+    font-weight: var(--fw-700);
+    color: var(--primary-300);
+    width: 4em;
+    gap: .4em;
+}
+
+.card-stats p span {
+    font-size: .6em;
+    letter-spacing: .1em;
+    color: var(--neutral-200);
+    font-weight: var(--fw-400);
+}

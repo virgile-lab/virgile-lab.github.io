@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+ :root {
+    /*Layouts*/
+    --mobileWidth: 375px;
+    --desktopWidth: 1440px;
+    /* Colors */
+    --primary-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --primary-cyan-bg: hsla(178, 100%, 50%, 0.5);
+    --neutral-100: hsl(0, 0%, 100%);
+    --neutral-200: hsl(215, 32%, 27%);
+    --neutral-300: hsl(216, 50%, 16%);
+    --neutral-400: hsl(217, 54%, 11%);
+    --line: hsla(215, 52%, 70%, 0.25);
+    --shadow-primary: hsla(218, 50%, 9%, 0.35);
+    --shadow-secondary: hsla(219, 74%, 12%, 0.35);
+    /* Font Size */
+    --fs-paragraph: 18px;
+    /* Font Weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+    /* Typography */
+    --ff-primary: 'Outfit', sans-serif;
+    ;
+}
+
+
+/*** A Modern CSS Reset by https://piccalil.li/blog/a-modern-css-reset/ ***/
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+    font-size: 16px;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/*Reset a element */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    background-color: var(--neutral-400);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+}
+
+.card-container {
+    max-width: 19.5em;
+    padding: 1.3em;
+    margin: 1em;
+    border-radius: 1em;
+    background-color: var(--neutral-300);
+    font-size: var(--fs-paragraph);
+    color: var(--primary-blue);
+    box-shadow: 0 1.5em 0em 1em var(--shadow-primary), 0 1.5em 0em 3em var(--shadow-secondary);
+}
+
+.main-image {
+    position: relative;
+    display: flex;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.main-image img {
+    transition: transform .5s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    background-image: url(images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--primary-cyan-bg);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    z-index: 100;
+}
+
+.main-image:hover img,
+.main-image:focus-within img {
+    transform: scale(1.2);
+}
+
+.main-image:hover .overlay,
+.main-image:focus-within .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.card-container h1 {
+    font-size: 1.2em;
+    font-weight: var(--fw-600);
+    color: var(--neutral-100);
+    letter-spacing: .01em;
+    margin-block: 1.2em .8em;
+}
+
+.card-container p {
+    line-height: 1.5;
+    font-weight: var(--fw-300);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.4em;
+}
+
+.info .price {
+    color: var(--primary-cyan);
+    font-size: .89em;
+    font-weight: var(--fw-400);
+    display: flex;
+    align-items: center;
+    letter-spacing: .01em;
+    position: relative;
+}
+
+.info .price::before {
+    content: url(images/icon-ethereum.svg);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    margin-right: .4em;
+}
+
+.info .days-left {
+    font-size: .9em;
+    display: flex;
+    align-items: center;
+    margin-right: .15em;
+}
+
+.info .days-left::before {
+    content: url(images/icon-clock.svg);
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 2px;
+    margin-right: .2em;
+}
+
+.author {
+    font-size: .88em;
+    font-weight: var(--fw-400);
+    display: flex;
+    align-items: center;
+    letter-spacing: .01em;
+    border-top: 1px solid var(--line);
+    padding-block: 1.1em .4em;
+}
+
+.author span {
+    color: var(--neutral-100);
+    font-weight: var(--fw-300);
+    margin-left: .3em;
+}
+
+.author::before {
+    content: '';
+    background-image: url(images/image-avatar.png);
+    background-position: center;
+    background-size: cover;
+    min-width: 2.2em;
+    min-height: 2.2em;
+    margin-right: .9em;
+    border: 1px solid var(--neutral-100);
+    border-radius: 50%;
+}
+
+.card-container :is(h1:hover,
+h1:focus-within,
+.author span:hover,
+.author span:focus-within) {
+    color: var(--primary-cyan);
+    cursor: pointer;
+}
+
+@media only screen and (max-width:500px) {
+    .card-container {
+        max-width: 18.15em;
+        padding: 1.3em 1.3em .95em 1.3em;
+    }
+    .card-container h1 {
+        margin-bottom: .7em;
+    }
+    .card-container p {
+        font-size: .9em;
+        line-height: 1.6;
+    }
+    .info {
+        margin-block: 1em;
+    }
+    .info :is(.price,
+    .days-left) {
+        font-size: .83em;
+    }
+    .info .price::before {
+        padding: 0;
+    }
+    .info .days-left::before {
+        padding: 0;
+    }
+    .author {
+        padding-top: 1.1em;
+        font-size: .83em;
+    }
+}

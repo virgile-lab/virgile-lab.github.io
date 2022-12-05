@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+    /*Layouts*/
+    --mobileWidth: 375px;
+    --desktopWidth: 1440px;
+    /* Colors */
+    --clr-Pale-Blue: hsl(225, 100%, 94%);
+    --clr-Bright-Blue: hsl(245, 75%, 52%);
+    --clr-btn-hover: hsl(249, 67%, 63%);
+    --clr-neutral-100: #fff;
+    --clr-neutral-200: hsl(225, 100%, 98%);
+    --clr-neutral-300: hsl(224, 23%, 55%);
+    --clr-neutral-600: hsl(223, 47%, 23%);
+    --clr-shadow: rgba(31, 47, 86, 0.15);
+    /* Font Size */
+    font-size: 10px;
+    /* Font Weight */
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+    /* Typography */
+    --ff-primary: 'Red Hat Display', sans-serif;
+    /*Utilities*/
+}
+
+
+/*** A Modern CSS Reset by https://piccalil.li/blog/a-modern-css-reset/ ***/
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+
+/* Remove list styles, margin and padding on ul, ol elements */
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+
+body {
+    min-height: 100%;
+    text-rendering: optimizeSpeed;
+    line-height: 1;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* A elements inherit color */
+
+a {
+    color: inherit;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Inherit fonts for inputs and .payments */
+
+input,
+.payment,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    background-color: var(--clr-Pale-Blue);
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    padding: 2.4rem;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 50vmin;
+}
+
+.card-container {
+    min-width: 23rem;
+    max-width: 45rem;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: var(--clr-neutral-100);
+    overflow: hidden;
+    box-shadow: 0 2rem 2rem 0 var(--clr-shadow);
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.7rem 2.4rem 3.4rem;
+}
+
+.sub-container .header h1 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+    font-weight: var(--fw-900);
+    color: var(--clr-neutral-600);
+    margin-block: 0 2.2rem;
+}
+
+.sub-container .header p {
+    font-size: 1.5rem;
+    letter-spacing: -.04rem;
+    line-height: 1.65;
+    padding: 0 1rem 2.4rem;
+    color: var(--clr-neutral-300);
+}
+
+.annual-plan-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: .8rem;
+    background-color: var(--clr-neutral-200);
+}
+
+@media only screen and (max-width: 360px) {
+    .annual-plan-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.annual-plan {
+    display: flex;
+    align-items: center;
+    gap: 1.9rem;
+}
+
+.annual-plan p {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    font-size: 1.4rem;
+    font-weight: var(--fw-900);
+    color: var(--clr-neutral-600);
+}
+
+.annual-plan p span {
+    font-weight: var(--fw-500);
+    color: var(--clr-neutral-300);
+}
+
+.change {
+    font-size: 1.25rem;
+    font-weight: var(--fw-900);
+    color: var(--clr-Bright-Blue);
+}
+
+.change :is(a:hover,
+a:focus-visible) {
+    color: var(--clr-neutral-300);
+    text-decoration: none;
+}
+
+.sub-container button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.sub-container .payment {
+    position: relative;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: var(--fw-700);
+    letter-spacing: .04rem;
+    padding-block: 1.8rem;
+    border-radius: 1rem;
+    color: var(--clr-neutral-200);
+    background-color: var(--clr-Bright-Blue);
+    margin-block: 2.3rem 2.8rem;
+    box-shadow: 0 2rem 1rem 0 var(--clr-Pale-Blue);
+    transition: all .3s ease-out;
+    overflow: hidden;
+}
+
+.sub-container .payment:hover,
+.sub-container .payment:focus-visible {
+    transform: scale(1.05);
+}
+
+.sub-container .payment::before {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-btn-hover);
+    height: 100%;
+    width: 0%;
+    left: 0;
+    top: 0;
+    mix-blend-mode: lighten;
+    transition: all .2s ease-out;
+}
+
+.sub-container .payment:hover::before,
+.sub-container .payment:focus-visible::before {
+    width: 100%;
+}
+
+.cancel {
+    font-size: 1.5rem;
+    font-weight: var(--fw-900);
+    color: var(--clr-neutral-300);
+    font-family: inherit;
+}
+
+.cancel:hover,
+.cancel:focus-visible {
+    color: var(--clr-neutral-600);
+    cursor: pointer;
+}
+
+@media only screen and (min-width:450px) {
+    main {
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+    .sub-container {
+        padding: 4.8rem 4.8rem 4.8rem;
+    }
+    .sub-container .header p {
+        font-size: 1.7rem;
+        line-height: 1.5;
+    }
+    .annual-plan-container {
+        padding: 2.4rem;
+    }
+    .annual-plan p {
+        font-size: 1.6rem;
+    }
+    .change {
+        font-size: 1.4rem;
+    }
+    .sub-container .payment {
+        margin-block: 3.2rem 3.6rem;
+    }
+}
