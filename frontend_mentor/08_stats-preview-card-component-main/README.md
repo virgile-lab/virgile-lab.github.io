@@ -1,6 +1,6 @@
 # Frontend Mentor - Stats preview card component solution
 
-This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 
 ## Table of contents
@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/stats-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/stats-preview-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/stats-preview-card-component-main/](https://virgile-lab.github.io/stats-preview-card-component-main/)
+- Solution URL: [here](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/08_stats-preview-card-component-main)
+- Live Site URL: [here](https://virgile-lab.github.io/frontend_mentor/08_stats-preview-card-component-main/)
 
 ### Built with
 

@@ -1,6 +1,6 @@
 # Frontend Mentor - 3-column preview card component solution
 
-This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/3-column-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/3-column-preview-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/3-column-preview-card-component-main/](https://virgile-lab.github.io/3-column-preview-card-component-main/)
+- Solution URL: [here](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/05_three-column-preview-card-component-main)
+- Live Site URL: [here](https://virgile-lab.github.io/frontend_mentor/05_three-column-preview-card-component-main/)
 
 ### Built with
 

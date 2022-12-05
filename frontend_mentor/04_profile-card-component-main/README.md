@@ -1,6 +1,6 @@
 # Frontend Mentor - Profile card component solution
 
-This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Profile card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -30,8 +30,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/profile-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/profile-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/profile-card-component-main/](https://virgile-lab.github.io/profile-card-component-main/)
+- Solution URL: [here](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/04_profile-card-component-main)
+- Live Site URL: [here](https://virgile-lab.github.io/frontend_mentor/04_profile-card-component-main/)
 
 ### Built with
 

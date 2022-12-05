@@ -1,6 +1,6 @@
 # Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/product-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/product-preview-card-component-main)
-- Live Site URL: [https://virgile-lab.github.io/product-preview-card-component-main/](https://virgile-lab.github.io/product-preview-card-component-main/)
+- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/01_product-preview-card-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/01_product-preview-card-component-main)
+- Live Site URL: [https://virgile-lab.github.io/frontend_mentor/01_product-preview-card-component-main/](https://virgile-lab.github.io/frontend_mentor/01_product-preview-card-component-main/)
 
 ## My process
 
