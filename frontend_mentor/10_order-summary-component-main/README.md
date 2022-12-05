@@ -1,6 +1,6 @@
 # Frontend Mentor - Order summary card solution
 
-This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/order-summary-component-main](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/order-summary-component-main)
-- Live Site URL: [https://virgile-lab.github.io/order-summary-component-main/](https://virgile-lab.github.io/order-summary-component-main/)
+- Solution URL: [here](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/10_order-summary-component-main)
+- Live Site URL: [here](https://virgile-lab.github.io/order-summary-component-main/)
 
 ### Built with
 

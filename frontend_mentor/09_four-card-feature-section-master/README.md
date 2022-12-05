@@ -1,6 +1,6 @@
 # Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/virgile-lab/virgile-lab.github.io/tree/main/four-card-feature-section-master](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/four-card-feature-section-master)
-- Live Site URL: [https://virgile-lab.github.io/four-card-feature-section-master/](https://virgile-lab.github.io/four-card-feature-section-master/)
+- Solution URL: [here](https://github.com/virgile-lab/virgile-lab.github.io/tree/main/frontend_mentor/09_four-card-feature-section-master)
+- Live Site URL: [here](https://virgile-lab.github.io/frontend_mentor/09_four-card-feature-section-master/)
 
 ### Built with
 
