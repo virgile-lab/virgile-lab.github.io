@@ -699,8 +699,7 @@ main {
 }
 
 .card-edit-content .card-edit-feed-url span:nth-child(2) {
-    display: flex;
-    flex-wrap: wrap;
+    text-wrap: wrap;
 }
 
 .card-edit-content .card-edit-feed-url {
