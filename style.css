@@ -463,11 +463,6 @@ main {
     overflow: hidden;
 }
 
-.card-wrapper:focus, .card-wrapper:focus-within {
-    transform: scale(1.05);
-    box-shadow: 0rem 2rem 2rem 0rem rgba(0, 0, 0, 0.2), inset .2rem .2rem 1rem 0rem rgba(255, 255, 255, 0.1);
-}
-
 .card-wrapper:hover header {
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -702,6 +697,12 @@ main {
     width: 3rem;
     min-width: 3rem;
 }
+
+.card-edit-content .card-edit-feed-url span:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card-edit-content .card-edit-feed-url {
     font-size: 1.4rem;
     display: flex;
@@ -838,7 +839,27 @@ main {
 }
 
 /* End Nothing To Display */
+.article-complete {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    min-width: 100svw;
+    font-size: 1.4rem;
+    background-color: black;
+    padding: 3rem;
+    z-index: 9999;
+}
 
+.article-complete h1 {
+    font-size: 3rem;
+}
+.article-complete p {
+    margin: 2rem 0;
+}
+.article-complete img {
+    margin: 2rem 0;
+}
 /* Styles à appliquer lorsque :hover n'est pas supporté */
 @media not all and (hover: hover) {
 
