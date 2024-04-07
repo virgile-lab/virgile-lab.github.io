@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>RSS Reader</title>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="top-main-header">
+            <div class="logo">
+                <img src="assets/img/logo.svg" alt="logo image" srcset="">
+            </div>
+            <button class="add-btn circle-btn"></button>
+        </div>
+        <div class="bottom-main-header">
+            <div class="filters">
+                <button class="one-column square-btn"></button>
+                <button class="two-column square-btn"></button>
+                <button class="three-column square-btn"></button>
+            </div>
+            <button class="options square-btn"></button>
+        </div>
+    </header>
+    <main>
+       <!-- <div class="card-wrapper" data-key="0" tabindex="0">
+            <header>
+                <h2 class="card-title">PC - JeuxVideo.com</h2>
+                <button class="edit-btn circle-btn"></button>
+                <button class="refresh-btn circle-btn"></button>
+            </header>
+            <article class="card-article" data-item="0">
+                <h2 class="article-title">Carte intvvvv vvveractive Hogwarts Legacy : Demiguise, Épreuves de Merlin...
+                    Trouvepz tout ce que vous cherchez en 1 clic !</h2>
+                <div class="article-image">
+                    <img src="assets/img/default_image.webp" alt="image">
+                </div>
+                <p class="article-description">Le nouvel épisode d’Alone in the Dark est enfin disponible ! Vous allez
+                    donc pouvoir découvrir cette aventure horrifique qui revisite l’histoire du jeu légendaire conçu par
+                    Frédérick Raynal et son équipe en 1992. Nous avons préparé une petite vidéo pour vous dévoiler les
+                    premières minutes du jeu.</p>
+                <footer>
+                    <span class="article-author">AUTEUR : Carnbee</span>
+                    <span class="article-category">CATEGORIE : Gameplay</span>
+                    <a class="article-link"
+                        href="https://www.jeuxvideo.com/videos/1867405/alone-in-the-dark-nous-plongeons-dans-le-cauchemar-avec-ces-12-minutes-de-gameplay.htm"
+                        target="_blank" rel="noopener noreferrer">Lien de l'article</a>
+                    <span class="article-date">Sun, 24 Mar 2024 17:40:02</span>
+                </footer>
+            </article>
+            <button class="prev-article-btn" data-nav="prev"></button>
+            <button class="next-article-btn" data-nav="next"></button>
+            <div class="card-edit-wrapper" data-state="close">
+                <header>
+                    <input type="text" value="Titre du flux RSS">
+                    <button class="delete-btn circle-btn"></button>
+                </header>
+                <div class="card-edit-content-wrapper">
+                    <div class="card-edit-content">
+                        <div class="card-edit-feed-url">
+                            <span></span>
+                            <span>https://feedurl.com/rss</span>
+                        </div>
+                        <div class="tags-wrapper">
+                            <span class="tags-icon"></span>
+                            <span class="tag-item">Actualités</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">IA</span>
+                            <span class="tag-item">Actualités</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">IA</span>
+                            <span class="tag-item">Actualités</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">IA</span>
+                            <span class="tag-item">Actualités</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">Technologie</span>
+                            <span class="tag-item">Science</span>
+                            <span class="tag-item">Santé</span>
+                            <span class="tag-item">IA</span>
+                            <button class="add-btn circle-btn"></button>
+                        </div>
+                    </div>
+                    <div class="card-edit-content-btn-wrapper">
+                        <button class="save-btn circle-btn"></button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </main>
+    <div class="add-rss-feed-wrapper" data-state="close">
+        <div action="" class="add-rss-feed">
+            <span class="url-error-display"></span>
+            <input type="text" placeholder="Url du flux RSS" autofocus>
+            <button class="add-btn circle-btn"></button>
+        </div>
+    </div>
+    <div></div>
+
+</body>
+
+</html>
