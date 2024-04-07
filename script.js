@@ -674,7 +674,7 @@ function displayArticle(cardDataKeyValue, dataItemValue = 0) {
 
 
 /*------ A voir ------*/
-test()
+
 async function test() {
     try {
         // Récupérer les données à partir de l'URL spécifiée en utilisant l'API
